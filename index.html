@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ignacio Orellana">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YT-simulation</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="div-nav">
+                <div class="logo">
+                    <img id="logo" src="static/images/logo.png" alt="Logo">
+                    <h1>Video<span>Stream</span></h1>
+                </div>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#explorar">Explorar</a></li>
+                    <li><a href="#miLista">Mi lista</a></li>
+                </ul>
+            </div>
+            <div class="div-nav2">
+                <input type="text" id="search" placeholder="🔍">
+                <img src="static/images/noti.png" alt="Notifications">
+                <img src="static/images/user.webp" alt="User">
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="section1">
+            <div class="sec1-div1">
+                <div>
+                    <video src="video.mp4" controls></video>
+                    <h2>Video Title</h2>
+                    <p>Video description goes here.</p>
+                </div>
+                <div>
+                    <div>
+                        <div class="like-btn"> 
+                            <div class="like">
+                                <img src="like.png" alt="Like">
+                                <p></p>
+                            </div>
+                            <div class="dislike">
+                                <img src="dislike.png" alt="Dislike">
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="share-btn">
+                            <img src="share.png" alt="Share">
+                            <p>Compartir</p>
+                        </div>
+                        <div class="save-btn">
+                            <img src="save.png" alt="Save">
+                            <p>Agregar a la lista</p>
+                        </div>
+                    </div>
+                    <div class="Creador">
+                        <div>
+                            <img src="creator.png" alt="Creator">
+                            <div>
+                                <h3>Creator Name</h3>
+                                <p>Subscriber count</p>
+                            </div>
+                        </div>
+                        <button>Suscribirse</button>
+                    </div>
+                    <div class="descripcion">
+                        <p>Video description goes here.</p>
+                        <a href="" class="mas">Mostrar más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="sec1-div2">
+                <div id="lista">
+                    <div>
+                        <h3>Siguiente en la cola</h3>
+                        <button>Limpiar cola</button>
+                    </div>
+                    <div>
+                        <div class="video">
+                            <div>
+                                <video src=""></video>
+                            </div>
+                            <div>
+                                <h4>Video Title</h4>
+                                <p>Creator Name</p>
+                                <p>Vistas</p>
+                            </div>
+                            <button>x</button>
+                        </div>
+                        <div class="video">
+                            <div>
+                                <video src=""></video>
+                            </div>
+                            <div>
+                                <h4>Video Title</h4>
+                                <p>Creator Name</p>
+                                <p>Vistas</p>
+                            </div>
+                            <button>x</button>
+                        </div>
+                        <div class="video">
+                            <div>
+                                <video src=""></video>
+                            </div>
+                            <div>
+                                <h4>Video Title</h4>
+                                <p>Creator Name</p>
+                                <p>Vistas</p>
+                            </div>
+                            <button>x</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="recomendados">
+                    <h3>Recomendados</h3>
+                    <div class="video">
+                            <div>
+                                <video src=""></video>
+                            </div>
+                            <div>
+                                <h4>Video Title</h4>
+                                <p>Creator Name</p>
+                                <p>Vistas</p>
+                            </div>
+                            <button>+</button>
+                        </div>
+                        <div class="video">
+                            <div>
+                                <video src=""></video>
+                            </div>
+                            <div>
+                                <h4>Video Title</h4>
+                                <p>Creator Name</p>
+                                <p>Vistas</p>
+                            </div>
+                            <button>+</button>
+                        </div>
+                        <div class="video">
+                            <div>
+                                <video src=""></video>
+                            </div>
+                            <div>
+                                <h4>Video Title</h4>
+                                <p>Creator Name</p>
+                                <p>Vistas</p>
+                            </div>
+                            <button>+</button>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <section class="section2">
+            <h3>Más Videos</h3>
+            <div class="sec2-div">
+                <div class="video">
+                    <div>
+                        <video src=""></video>
+                    </div>
+                    <div>
+                        <h4>Video Title</h4>
+                        <p>Vistas</p>
+                    </div>
+                </div>
+                <div class="video">
+                    <div>
+                        <video src=""></video>
+                    </div>
+                    <div>
+                        <h4>Video Title</h4>
+                        <p>Vistas</p>
+                    </div>
+                </div>
+                <div class="video">
+                    <div>
+                        <video src=""></video>
+                    </div>
+                    <div>
+                        <h4>Video Title</h4>
+                        <p>Vistas</p>
+                    </div>
+                </div>
+                <div class="video">
+                    <div>
+                        <video src=""></video>
+                    </div>
+                    <div>
+                        <h4>Video Title</h4>
+                        <p>Vistas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
