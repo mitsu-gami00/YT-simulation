@@ -26,6 +26,7 @@ nav {
     align-items: center;
     padding: 0 2rem;
     width: 100%;
+    gap: 1.5rem;
 }
 
 .div-nav{
@@ -38,7 +39,7 @@ nav {
     flex:1;
     flex-direction: row;
     justify-content: flex-end;
-    gap: 1.5rem;
+    gap: 1%;
 }
 
 .logo {
@@ -89,4 +90,53 @@ input[type="text"] {
     border-radius: 5px;
     font-size: 1rem;
     text-align: right;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.sec1-div1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex: 2;
+}
+
+.sec1-div2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+@media (max-width: 767px) {
+ul {
+    display: none;
+}
+
+input[type="text"] {
+    max-width: 40px;
+}
+
+.div-nav2 img {
+    display: none;
+}
+
 }
