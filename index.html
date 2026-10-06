@@ -1,199 +1,296 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Ignacio Orellana">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Ignacio Orellana" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YT-simulation</title>
-    <link rel="stylesheet" href="static/css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="static/css/style.css" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <div class="div-nav">
-                <div class="logo">
-                    <img id="logo" src="static/images/logo.png" alt="Logo">
-                    <h1>Video<span>Stream</span></h1>
-                </div>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#explorar">Explorar</a></li>
-                    <li><a href="#miLista">Mi lista</a></li>
-                </ul>
-            </div>
-            <div class="div-nav2">
-                <input type="text" id="search" placeholder="🔍">
-                <img id="noti" src="static/images/noti.png" alt="Notifications">
-                <img src="static/images/user.webp" alt="User">
-            </div>
-        </nav>
+      <nav>
+        <div class="div-nav">
+          <div class="logo">
+            <img id="logo" src="static/images/logo.png" alt="Logo" />
+            <h1>Video<span>Stream</span></h1>
+          </div>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#explorar">Explorar</a></li>
+            <li><a href="#miLista">Mi lista</a></li>
+          </ul>
+        </div>
+        <div class="div-nav2">
+          <input type="text" id="search" placeholder="🔍" />
+          <img id="noti" src="static/images/noti.png" alt="Notifications" />
+          <img src="static/images/user.webp" alt="User" />
+        </div>
+      </nav>
     </header>
     <main>
-        <section class="section1">
-            <div class="sec1-div1">
+      <section class="section1">
+        <div class="sec1-div1">
+          <div>
+            <video
+              id="video-reproducido"
+              src="static/Video/LocoGod.mp4"
+              controls
+            ></video>
+            <h2>MUY BUENA ANIMACIÓN 🤣</h2>
+            <p>1,380 vistas 5 oct 2026</p>
+          </div>
+          <div>
+            <div class="botones">
+              <div class="like-btn">
+                <div class="like">
+                  <img src="static/images/like.png" alt="Like" />
+                  <p id="like-count">396</p>
+                </div>
+                <div class="dislike">
+                  <img src="static/images/dislike.png" alt="Dislike" />
+                  <p id="dislike-count">4</p>
+                </div>
+              </div>
+              <div class="share-btn">
+                <img src="static/images/compartir.png" alt="Share" />
+                <p>Compartir</p>
+              </div>
+              <div class="save-btn">
+                <img src="static/images/agregar.png" alt="Save" />
+                <p>Agregar a la lista</p>
+              </div>
+            </div>
+            <div class="Creador">
+              <div>
+                <img src="static/images/Locochon_profile.webp" alt="Creator" />
                 <div>
-                    <video src="video.mp4" controls></video>
-                    <h2>Video Title</h2>
-                    <p>Video description goes here.</p>
+                  <h3>LocoRandom</h3>
+                  <p>122 k suscriptores</p>
                 </div>
+              </div>
+              <button>Suscribirse</button>
+            </div>
+            <div class="descripcion">
+              <p>No se agregó una descripción a este video.</p>
+              <a href="#" class="mas">Mostrar más</a>
+            </div>
+          </div>
+        </div>
+        <div class="sec1-div2">
+          <div id="lista">
+            <div class="lista-botones">
+              <h3>Siguiente en la cola</h3>
+              <button>Limpiar cola</button>
+            </div>
+
+            <div>
+              <!-- VIDEO COLA 1 -->
+              <div class="video">
+                <div class="video-sec1">
+                  <video
+                    src="static/Video/montana.mp4"
+                    muted
+                    preload="metadata"
+                  ></video>
+                </div>
+
+                <div class="video-info">
+                  <div>
+                    <h4>Explorando las montañas</h4>
+                    <p>VideoStream</p>
+                    <p>120 mil visualizaciones</p>
+                  </div>
+
+                  <button id="borrar1">❌</button>
+                </div>
+              </div>
+
+              <!-- VIDEO COLA 2 -->
+              <div class="video">
+                <div class="video-sec1">
+                  <video
+                    src="static/Video/comida.mp4"
+                    muted
+                    preload="metadata"
+                  ></video>
+                </div>
+
+                <div class="video-info">
+                  <div>
+                    <h4>Comida casera</h4>
+                    <p>VideoStream</p>
+                    <p>98 mil visualizaciones</p>
+                  </div>
+
+                  <button id="borrar2">❌</button>
+                </div>
+              </div>
+
+              <!-- VIDEO COLA 3 -->
+              <div class="video">
+                <div class="video-sec1">
+                  <video
+                    src="static/Video/ciudad.mp4"
+                    muted
+                    preload="metadata"
+                  ></video>
+                </div>
+
+                <div class="video-info">
+                  <div>
+                    <h4>Ciudades desde el aire</h4>
+                    <p>VideoStream</p>
+                    <p>210 mil visualizaciones</p>
+                  </div>
+
+                  <button id="borrar3">❌</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="recomendados">
+            <h3>Recomendados</h3>
+
+            <!-- RECOMENDADO 1 -->
+            <div class="video">
+              <div class="video-sec1">
+                <video
+                  src="static/Video/chef.mp4"
+                  muted
+                  preload="metadata"
+                ></video>
+              </div>
+
+              <div class="video-info">
                 <div>
-                    <div>
-                        <div class="like-btn"> 
-                            <div class="like">
-                                <img src="like.png" alt="Like">
-                                <p></p>
-                            </div>
-                            <div class="dislike">
-                                <img src="dislike.png" alt="Dislike">
-                                <p></p>
-                            </div>
-                        </div>
-                        <div class="share-btn">
-                            <img src="share.png" alt="Share">
-                            <p>Compartir</p>
-                        </div>
-                        <div class="save-btn">
-                            <img src="save.png" alt="Save">
-                            <p>Agregar a la lista</p>
-                        </div>
-                    </div>
-                    <div class="Creador">
-                        <div>
-                            <img src="creator.png" alt="Creator">
-                            <div>
-                                <h3>Creator Name</h3>
-                                <p>Subscriber count</p>
-                            </div>
-                        </div>
-                        <button>Suscribirse</button>
-                    </div>
-                    <div class="descripcion">
-                        <p>Video description goes here.</p>
-                        <a href="" class="mas">Mostrar más</a>
-                    </div>
+                  <h4>Preparando una receta</h4>
+                  <p>VideoStream</p>
+                  <p>80 mil visualizaciones</p>
                 </div>
+
+                <button id="agregar1">+</button>
+              </div>
             </div>
-            <div class="sec1-div2">
-                <div id="lista">
-                    <div>
-                        <h3>Siguiente en la cola</h3>
-                        <button>Limpiar cola</button>
-                    </div>
-                    <div>
-                        <div class="video">
-                            <div>
-                                <video src=""></video>
-                            </div>
-                            <div>
-                                <h4>Video Title</h4>
-                                <p>Creator Name</p>
-                                <p>Vistas</p>
-                            </div>
-                            <button>x</button>
-                        </div>
-                        <div class="video">
-                            <div>
-                                <video src=""></video>
-                            </div>
-                            <div>
-                                <h4>Video Title</h4>
-                                <p>Creator Name</p>
-                                <p>Vistas</p>
-                            </div>
-                            <button>x</button>
-                        </div>
-                        <div class="video">
-                            <div>
-                                <video src=""></video>
-                            </div>
-                            <div>
-                                <h4>Video Title</h4>
-                                <p>Creator Name</p>
-                                <p>Vistas</p>
-                            </div>
-                            <button>x</button>
-                        </div>
-                    </div>
+
+            <!-- RECOMENDADO 2 -->
+            <div class="video">
+              <div class="video-sec1">
+                <video
+                  src="static/Video/ocean.mp4"
+                  muted
+                  preload="metadata"
+                ></video>
+              </div>
+
+              <div class="video-info">
+                <div>
+                  <h4>Paisajes del océano</h4>
+                  <p>VideoStream</p>
+                  <p>60 mil visualizaciones</p>
                 </div>
-                <div id="recomendados">
-                    <h3>Recomendados</h3>
-                    <div class="video">
-                            <div>
-                                <video src=""></video>
-                            </div>
-                            <div>
-                                <h4>Video Title</h4>
-                                <p>Creator Name</p>
-                                <p>Vistas</p>
-                            </div>
-                            <button>+</button>
-                        </div>
-                        <div class="video">
-                            <div>
-                                <video src=""></video>
-                            </div>
-                            <div>
-                                <h4>Video Title</h4>
-                                <p>Creator Name</p>
-                                <p>Vistas</p>
-                            </div>
-                            <button>+</button>
-                        </div>
-                        <div class="video">
-                            <div>
-                                <video src=""></video>
-                            </div>
-                            <div>
-                                <h4>Video Title</h4>
-                                <p>Creator Name</p>
-                                <p>Vistas</p>
-                            </div>
-                            <button>+</button>
-                        </div>
-                </div>
+
+                <button id="agregar2">+</button>
+              </div>
             </div>
-        </section>
-        <section class="section2">
-            <h3>Más Videos</h3>
-            <div class="sec2-div">
-                <div class="video">
-                    <div>
-                        <video src=""></video>
-                    </div>
-                    <div>
-                        <h4>Video Title</h4>
-                        <p>Vistas</p>
-                    </div>
+
+            <!-- RECOMENDADO 3 -->
+            <div class="video">
+              <div class="video-sec1">
+                <video
+                  src="static/Video/amanecer.mp4"
+                  muted
+                  preload="metadata"
+                ></video>
+              </div>
+
+              <div class="video-info">
+                <div>
+                  <h4>Amaneceres increíbles</h4>
+                  <p>VideoStream</p>
+                  <p>72 mil visualizaciones</p>
                 </div>
-                <div class="video">
-                    <div>
-                        <video src=""></video>
-                    </div>
-                    <div>
-                        <h4>Video Title</h4>
-                        <p>Vistas</p>
-                    </div>
-                </div>
-                <div class="video">
-                    <div>
-                        <video src=""></video>
-                    </div>
-                    <div>
-                        <h4>Video Title</h4>
-                        <p>Vistas</p>
-                    </div>
-                </div>
-                <div class="video">
-                    <div>
-                        <video src=""></video>
-                    </div>
-                    <div>
-                        <h4>Video Title</h4>
-                        <p>Vistas</p>
-                    </div>
-                </div>
+
+                <button id="agregar3">+</button>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
+      <section class="section2">
+        <h3>Más Videos</h3>
+
+        <div class="sec2-div">
+          <!-- VIDEO 1 -->
+          <div class="video-div">
+            <div>
+              <video
+                class="video-mas"
+                src="static/Video/barcos.mp4"
+                muted
+                preload="metadata"
+              ></video>
+            </div>
+
+            <div>
+              <h4>Un día en el océano</h4>
+              <p>80 mil visualizaciones</p>
+            </div>
+          </div>
+
+          <!-- VIDEO 2 -->
+          <div class="video-div">
+            <div>
+              <video
+                class="video-mas"
+                src="static/Video/cocina.mp4"
+                muted
+                preload="metadata"
+              ></video>
+            </div>
+
+            <div>
+              <h4>Preparando una comida</h4>
+              <p>95 mil visualizaciones</p>
+            </div>
+          </div>
+
+          <!-- VIDEO 3 -->
+          <div class="video-div">
+            <div>
+              <video
+                class="video-mas"
+                src="static/Video/calles.mp4"
+                muted
+                preload="metadata"
+              ></video>
+            </div>
+
+            <div>
+              <h4>Recorrido por la ciudad</h4>
+              <p>60 mil visualizaciones</p>
+            </div>
+          </div>
+
+          <!-- VIDEO 4 -->
+          <div class="video-div">
+            <div>
+              <video
+                class="video-mas"
+                src="static/Video/ciudad_noche.mp4"
+                muted
+                preload="metadata"
+              ></video>
+            </div>
+
+            <div>
+              <h4>La ciudad de noche</h4>
+              <p>110 mil visualizaciones</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-</body>
+    <script src="static/js/script.js"></script>
+  </body>
 </html>
