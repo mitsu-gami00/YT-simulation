@@ -28,7 +28,7 @@ if (botonLike) {
 
             botonLike.classList.add("activo");
 
-            mostrarMensaje("👍 Te gusta este video");
+            mostrarMensaje("Te gusta este video");
 
         } else {
             cantidad--;
@@ -80,7 +80,7 @@ if (botonDislike) {
                 botonLike.classList.remove("activo");
             }
 
-            mostrarMensaje("👎 No te gusta este video");
+            mostrarMensaje("No te gusta este video");
 
         } else {
 
@@ -119,7 +119,7 @@ if (botonSuscribirse) {
 
             suscrito = true;
 
-            mostrarMensaje("🔔 Te has suscrito al canal");
+            mostrarMensaje("Te has suscrito al canal");
 
         } else {
 
